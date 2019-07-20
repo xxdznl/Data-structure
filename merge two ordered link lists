@@ -1,0 +1,30 @@
+//List 结构体指针 
+//合并两个有序(升序)链表,有哨兵节点,合并后升序排列
+Merge(List L1,List L2)
+{
+   List pa,pb,pc,L;//pa，pb用于遍历L1,L2,pc用于连接,L作新链表的返回值
+   L = (List)malloc(sizeof(struct Node));
+   pa = L1->next;
+   pb = L2->next;
+   pc = L;
+   while(pa&&pb)//当pa，pb都不为NULL时
+   {
+      if(pa->data<pb->data)
+      {
+          pc->next = pa;
+          pc = pa;
+          pa = pa->next;
+      }
+      else
+      {
+          pc->next = pb;
+          pc = pb;
+          pb = pb->next;
+      }
+   }
+   if(pa==NULL&&pb==NULL)
+   pc->next = NULL;
+   else
+   pc->next = pa ? pa:pb;
+   return L;
+}
