@@ -17,4 +17,3 @@ node* reverse(node * head)
     }
     return head;
 }
-![avatar](https://i.loli.net/2019/07/22/5d359fb5f2dcf19112.png)
