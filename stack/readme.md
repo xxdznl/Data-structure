@@ -2,5 +2,5 @@
 栈的一些操作  
 push 压栈  
 out 出栈  
-stack full 栈满  
-stack empty 栈空  
+isfull 判断栈满  
+isempty 判断栈空  
