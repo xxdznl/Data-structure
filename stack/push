@@ -1,0 +1,17 @@
+typedef struct node *stack;
+struct node{
+   elementtype data[maxsize];//stack length
+   int top;// stack top
+}
+void push(stack ptrs,elementtype item)
+{
+   if(ptrs->top == maxsize-1)//stack full
+   {
+      printf("堆栈满");
+   }
+   else
+   {
+      ptrs->data[++(ptrs->top)] = item;
+      return;
+   }
+}
