@@ -3,4 +3,15 @@ struct node{
    elementtype data[maxsize];//stack length
    int top;// stack top
 }
-void out(stack ptrs,elementtype )
+elementtype out(stack ptrs)
+{
+    if(ptrs->top == -1)
+    {
+      printf("栈空");
+      return Error;//Error是elementtype的特殊值，表示出错
+    }
+    else
+    {
+      return ptrs->data[(ptrs->top)--];
+    }
+}
