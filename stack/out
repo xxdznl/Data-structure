@@ -1,0 +1,6 @@
+typedef struct node *stack;
+struct node{
+   elementtype data[maxsize];//stack length
+   int top;// stack top
+}
+void out(stack ptrs,elementtype )
