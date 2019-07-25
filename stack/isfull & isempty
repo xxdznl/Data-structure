@@ -5,8 +5,5 @@ struct node{
 }
 int isfull(stack ptrs)
 {
-  if(ptrs->top == maxsize-1)//isempty：if（ptrs->top == -1）
-  return 1;//1为满（空）
-  else 
-  return 0;//0为非满（非空）
+  return if(ptrs->top == maxsize-1)//isempty：return if(ptrs->top == -1);
 }
