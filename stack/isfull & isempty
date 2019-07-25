@@ -5,5 +5,5 @@ struct node{
 }
 int isfull(stack ptrs)
 {
-  return if(ptrs->top == maxsize-1)//isempty：return if(ptrs->top == -1);
+  return (ptrs->top == maxsize-1)//isempty：return (ptrs->top == -1);
 }
