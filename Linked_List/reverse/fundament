@@ -1,0 +1,19 @@
+//
+typedef struct Node
+{
+    int data;
+    node * next;
+}node;
+node* reverse(node * head)
+{
+    node* n = head;
+    head = NULL;
+    while(n)
+    {
+        node * temp = n;
+        n = n->next;
+        temp->next = head;
+        head = temp;
+    }
+    return head;
+}
