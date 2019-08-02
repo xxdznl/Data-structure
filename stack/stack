@@ -1,0 +1,11 @@
+struct snode
+{
+  elementtype * data
+  int top;
+  int maxsize;
+};
+typedef struct snode * stack;
+stack createStack(maxsize)
+{
+  stack S = (stack)malloc(sizeof
+}
