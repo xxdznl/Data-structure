@@ -8,4 +8,41 @@ typedef struct snode * stack;
 stack createStack(maxsize)
 {
   stack S = (stack)malloc(sizeof(struct snode));
+  S->data = (elementtype *)malloc(maxsize*sizeof(elementtype));
+  S->maxsize = maxsize;
+  S->top = top;
+  return S;
+}
+bool isfull(stack S)
+{
+  return (S->top == maxsize -1);
+}
+bool isempty(stack S)
+{
+  return (S->top == -1);
+}
+bool push(stack S,elementtype X)
+{
+  if(isfull(S))
+  {
+    printf("stack is full\n");
+    return false;
+  }
+  else 
+  {
+    S->data[++S->top] = X;
+    return true;
+  }
+}
+elementtype pop(stack S)
+{
+  if(isempty(S))
+  {
+    printf("stack is empty\n");
+    return error;
+  }
+  else 
+  {
+    return S->data[S->top--];
+  }
 }
