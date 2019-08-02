@@ -9,7 +9,7 @@ typedef struct qnode * queue
 queue create(int maxsize)//创建 只用了maxsize - 1 个
 {
   queue  Q = (queue)malloc(sizeof(queue));
-  data = (elementtype*)malloc(maxsize*(elementtype));
+  data = (elementtype*)malloc(maxsize*sizeof(elementtype));
   Q->front = Q->rear == 0;
   Q->maxsize = maxsize;
   return Q;
