@@ -7,5 +7,5 @@ struct snode
 typedef struct snode * stack;
 stack createStack(maxsize)
 {
-  stack S = (stack)malloc(sizeof
+  stack S = (stack)malloc(sizeof(struct snode));
 }
