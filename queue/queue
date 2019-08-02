@@ -1,0 +1,52 @@
+struct qnode
+{
+  elementtype * data;
+  int front;
+  int rear;
+  int maxsize;
+};
+typedef struct qnode * queue
+queue create(int maxsize)//创建 只用了maxsize - 1 个
+{
+  queue  Q = (queue)malloc(sizeof(queue));
+  data = (elementtype*)malloc(maxsize*(elementtype));
+  Q->front = Q->rear == 0;
+  Q->maxsize = maxsize;
+  return Q;
+}
+bool isfull(queue Q)// 是否已满
+{
+  return ((Q->rear+1)%maxsize == Q->front);
+}
+bool isempty(queue Q)//是否为空
+{
+  return(Q->rear == Q->front);
+}
+bool addq(queue Q,elementtype x)//向队列尾部增加
+{
+  if(isfull(Q))//是否已经满
+  {
+   printf("队列已满\n");
+   return true;
+  }
+  else
+  {
+    Q->rear = Q->rear+1 % Q->maxsize;//循环
+    Q->data[Q->rear] = X;
+    return false;
+  }
+}
+elementtype deleteq(queue Q)//队列头部出列
+{
+  if(isempty)//是否为空
+  {
+    return Error;
+    printf("队列为空");
+  }
+  else
+  {
+    Q->front = Q->front+1 % Q->maxsize;
+    return Q->data[Q->front];
+  }
+}
+
