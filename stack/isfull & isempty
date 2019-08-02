@@ -1,9 +1,0 @@
-typedef struct node *stack;
-struct node{
-   elementtype data[maxsize];//stack length
-   int top;// stack top
-}
-int isfull(stack ptrs)
-{
-  return (ptrs->top == maxsize-1)//isempty：return (ptrs->top == -1);
-}
